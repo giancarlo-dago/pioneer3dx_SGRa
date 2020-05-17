@@ -140,6 +140,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(control src/control.cpp)
+add_executable(control_new src/control_new.cpp)
 add_executable(opencv_pioneer src/opencv_pioneer.cpp)
 
 
@@ -155,6 +156,7 @@ add_executable(opencv_pioneer src/opencv_pioneer.cpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(control ${catkin_LIBRARIES})
+target_link_libraries(control_new ${catkin_LIBRARIES})
 target_link_libraries(opencv_pioneer ${catkin_LIBRARIES})
 target_link_libraries(opencv_pioneer ${OpenCV_LIBRARIES})
 
